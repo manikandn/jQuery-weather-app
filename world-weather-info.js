@@ -51,7 +51,7 @@ var InitMap = {
 	},
 
 	showWeather: function(lat,lng){
-		$.getJSON("//api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lng+"&appid=b32c6ca8c73ce068dc53638889e842db", function(data){
+		$.getJSON("http//api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lng+"&appid=b32c6ca8c73ce068dc53638889e842db", function(data){
 			var returnedWeatherDetails=JSON.parse(JSON.stringify(data));
 			console.log(returnedWeatherDetails);
 			$(".Weather-icon").html('<img style="margin-left:40%;" src="icon/'+returnedWeatherDetails.weather[0].icon+'.png">');
