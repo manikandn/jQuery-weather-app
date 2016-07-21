@@ -1,0 +1,116 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 98%;
+	background-color: #323435;
+	margin: 1%;
+}
+#Title_Wrapper{
+	height: 70px;
+	border-bottom: 1px solid white;
+}
+#Title_Wrapper h2{
+	color: #88D288;
+	padding: 15px 0 0 25px;
+}
+
+
+div#Content_Wrapper{
+	overflow: hidden;
+}
+
+div#Content{
+	float: left;
+	width: 50%;
+}
+div#Details_wrapper{
+	border: 1px solid #777;
+	margin: 6% 8% 6% 10%;
+	padding: 5% 10% 4% 10%;
+	height: 417px;
+}
+div#Map{
+	width: 84%;
+	height: 467px;
+	margin: 6% 8% 6% 8%;
+	padding: 5px;
+}
+
+div.nodata{
+	margin-top: 45%;
+	text-align: center;
+	color: white;
+}
+h3#City_name{
+	text-align: center;
+	background-color: #00aa00;
+	color: white;
+	padding: 5px;
+}
+div.Weather-icon{
+	height: 40px;
+}
+th{
+	width: 65%;
+	color: #778899;
+	text-align: left;
+    padding-left: 20px;
+}
+th.center{
+	text-align: center;
+}
+
+
+#Footer_Wrapper{
+	border-top: 1px solid white;
+}
+#Footer_Wrapper{
+	text-align: center;
+	padding: 10px 0;
+	color: #afa;
+}
+
+
+@media only screen and (min-width: 540px) and (max-width: 720px){
+	div#Content{
+		float: none;
+		width: 100%;
+	}
+
+	div#Map{
+		width: 80%;
+		height: 350px;
+		margin: 8% 10% 8% 10%;
+		padding: 5px;
+	}
+
+	div#Details_wrapper{
+		height: 403px;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 540px){
+	div#Content{
+		float: none;
+		width: 100%;
+	}
+
+	div#Map{
+		width: 80%;
+		height: 260px;
+		margin: 8% 10% 8% 10%;
+		padding: 5px;
+	}
+
+	div#Details_wrapper{
+		height: 403px;
+	}
+}
+
+.hide{
+	display: none;
+}

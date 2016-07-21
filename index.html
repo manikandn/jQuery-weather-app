@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>World Weather Info</title>
+		<link rel="stylesheet" type="text/css" href="world-weather-info.css">
+		<meta content="width=device-width, initial-scale=1.0"/>
+	</head>
+	<body>
+
+		<div id="Title_Wrapper">
+
+			<h2>World Weather Info</h2>
+
+		</div>
+
+		<div id="Content_Wrapper">
+
+			<div id="Content">
+
+				<div id="Map">
+					
+				</div>
+
+			</div>
+
+			<div id="Content">
+
+				<div id="Details_wrapper">
+
+					<div class="nodata">Click the map to view weather details.</div>
+
+					<div class="Details hide">
+
+						<h3 id="City_name">City Name</h3>
+
+						<div class="Weather-icon"></div>
+
+						<table class="tab_d">
+
+							<tr>	<th>Country:</th>					<td><span id="Country_name"></span></td>	</tr>
+							<tr>	<th>ID:</th>						<td><span id="City_ID"></span></td>			</tr>
+							<tr>	<th>Latitude:</th>					<td><span id="Latitude"></span></td>		</tr>
+							<tr>	<th>Longitude:</th>					<td><span id="Longitude"></span></td>		</tr>
+							<tr>	<th>Weather:</th>					<td><span id="Weather"></span></td>			</tr>
+							<tr>	<th>Description:</th>				<td><span id="Weather_desc"></span></td>	</tr>
+							<tr>	<th>Temperature(°C):</th>			<td><span id="Temperature"></span></td>		</tr>
+							<tr>	<th class="center">Min(°C):</th>	<td><span id="Temp_min"></span></td>		</tr>
+							<tr>	<th class="center">Max(°C):</th>	<td><span id="Temp_max"></span></td>		</tr>
+							<tr>	<th>Pressure:</th>					<td><span id="Pressure"></span></td>		</tr>
+							<tr>	<th>Humidity:</th>					<td><span id="Humidity"></span></td>		</tr>
+							<tr>	<th>Wind:</th>						<td></td>									</tr>
+							<tr>	<th class="center">	Speed:</th>		<td><span id="Wind_speed"></span></td>		</tr>
+							<tr>	<th class="center">	Deg:</th>		<td><span id="Wind_degree"></span></td>		</tr>
+							<tr>	<th>Sunrise:</th>					<td><span id="Sunrise"></span><br>			</tr>
+							<tr>	<th>Sunset:</th>					<td><span id="Sunset"></span><br>			</tr>
+						</table>
+
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="Footer_Wrapper">
+
+			<h5>©copyright 2016. All Rights Reserved.</h5>
+
+		</div>
+
+		<script async defer
+	      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtfoasLXDKLEMvx3kmhotMC1GgF7rQPHk">
+	    </script>
+
+	   <script type="text/template" id="maptemplate">
+	   
+	   </script>
+
+		<script src="jquery.js"></script>
+		<script src="underscore.js"></script>
+		<script src="world-weather-info.js"></script>
+	</body>
+</html>
