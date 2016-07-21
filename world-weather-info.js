@@ -51,32 +51,26 @@ var InitMap = {
 	},
 
 	showWeather: function(lat,lng){
-		$.ajax({
-			url: "//api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lng+"&appid=b32c6ca8c73ce068dc53638889e842db",
-			type: 'GET',
-			cache: false,
-			dataType: "jsonp",
-			success: function(data){
-				var returnedWeatherDetails=JSON.parse(JSON.stringify(data));
-				console.log(returnedWeatherDetails);
-				$(".Weather-icon").html('<img style="margin-left:40%;" src="icon/'+returnedWeatherDetails.weather[0].icon+'.png">');
-				document.getElementById("Latitude").innerHTML= returnedWeatherDetails.coord.lat;
-				document.getElementById("Longitude").innerHTML=returnedWeatherDetails.coord.lon;
-				document.getElementById("City_name").innerHTML= returnedWeatherDetails.name;
-				document.getElementById("Country_name").innerHTML=returnedWeatherDetails.sys.country;
-				document.getElementById("City_ID").innerHTML=returnedWeatherDetails.id;
-				document.getElementById("Weather").innerHTML=returnedWeatherDetails.weather[0].main;
-				document.getElementById("Weather_desc").innerHTML=returnedWeatherDetails.weather[0].description;
-				document.getElementById("Temperature").innerHTML=returnedWeatherDetails.main.temp;
-				document.getElementById("Temp_min").innerHTML=returnedWeatherDetails.main.temp_min;
-				document.getElementById("Temp_max").innerHTML=returnedWeatherDetails.main.temp_min;
-				document.getElementById("Pressure").innerHTML=returnedWeatherDetails.main.pressure;
-				document.getElementById("Humidity").innerHTML=returnedWeatherDetails.main.humidity;
-				document.getElementById("Wind_speed").innerHTML=returnedWeatherDetails.wind.speed;
-				document.getElementById("Wind_degree").innerHTML=returnedWeatherDetails.wind.deg;
-				document.getElementById("Sunrise").innerHTML=returnedWeatherDetails.sys.sunrise;
-				document.getElementById("Sunset").innerHTML=returnedWeatherDetails.sys.sunset;
-			}
+		$.getJSON("//api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lng+"&appid=b32c6ca8c73ce068dc53638889e842db", function(data){
+			var returnedWeatherDetails=JSON.parse(JSON.stringify(data));
+			console.log(returnedWeatherDetails);
+			$(".Weather-icon").html('<img style="margin-left:40%;" src="icon/'+returnedWeatherDetails.weather[0].icon+'.png">');
+			document.getElementById("Latitude").innerHTML= returnedWeatherDetails.coord.lat;
+			document.getElementById("Longitude").innerHTML=returnedWeatherDetails.coord.lon;
+			document.getElementById("City_name").innerHTML= returnedWeatherDetails.name;
+			document.getElementById("Country_name").innerHTML=returnedWeatherDetails.sys.country;
+			document.getElementById("City_ID").innerHTML=returnedWeatherDetails.id;
+			document.getElementById("Weather").innerHTML=returnedWeatherDetails.weather[0].main;
+			document.getElementById("Weather_desc").innerHTML=returnedWeatherDetails.weather[0].description;
+			document.getElementById("Temperature").innerHTML=returnedWeatherDetails.main.temp;
+			document.getElementById("Temp_min").innerHTML=returnedWeatherDetails.main.temp_min;
+			document.getElementById("Temp_max").innerHTML=returnedWeatherDetails.main.temp_min;
+			document.getElementById("Pressure").innerHTML=returnedWeatherDetails.main.pressure;
+			document.getElementById("Humidity").innerHTML=returnedWeatherDetails.main.humidity;
+			document.getElementById("Wind_speed").innerHTML=returnedWeatherDetails.wind.speed;
+			document.getElementById("Wind_degree").innerHTML=returnedWeatherDetails.wind.deg;
+			document.getElementById("Sunrise").innerHTML=returnedWeatherDetails.sys.sunrise;
+			document.getElementById("Sunset").innerHTML=returnedWeatherDetails.sys.sunset;
 		});
 	}
 
